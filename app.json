@@ -7,9 +7,9 @@
         "Bot",
         "Anime"
     ],
-    "repository":"https://github.com/lostb053/anibot",
-    "website":"https://github.com/lostb053/anibot",
-    "success_url":"https://t.me/lostb053",
+    "repository":"https://github.com/noobsohail/Rika",
+    "website":"https://github.com/noobsohail/Rika",
+    "success_url":"https://t.me/noobsohail",
     "env":{
         "API_ID":{
             "description":"Get this value from https://my.telegram.org"

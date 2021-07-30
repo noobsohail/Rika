@@ -1,1 +1,1 @@
-worker: python3 -m anibot
+worker: python3 -m Rika
