@@ -12,3 +12,4 @@ motor
 dnspython
 jikanpy
 natsort
+wikipedia
