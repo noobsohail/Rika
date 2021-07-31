@@ -11,9 +11,9 @@ import os
 from shutil import rmtree
 from .utils.google import googleimagesdownload
 
-IN_GRP = -1001459815052
+IN_GRP = -1001415010098
 bot = asst = tbot
-REQ_GO = -1001176025751
+REQ_GO = -1001579439262
 on = tbot.on
 auth = OWNER
 

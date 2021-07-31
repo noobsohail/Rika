@@ -60,7 +60,7 @@ async def filter_requests(event):
             [Button.url("💠 Channel 💠", url="https://t.me/indianimei"),
             Button.url("⚜️ Group ⚜️", url="https://t.me/indianimein")],
             [Button.url("📜 Index 📜", url="https://t.me/IndianimeNetwork"),
-            Button.url("Base", url="https://t.me/indanimebase")],
+            Button.url("Base", url="https://t.me/indianimebase")],
             [Button.url("Ongoing Anime", url="https://t.me/Ongoing_Anime1")]]
         await event.reply(f"**👋 Hello {user} !!**\n\n📍 Your Request for  `{anim}`  has been submitted to the admins.\n\n🚀 Your Request Will Be Uploaded In 48hours or less.\n📌 Please Note that Admins might be busy. So, this may take more time. \n\n**👇 See Your Request Status Here 👇**", buttons=btns)
         if not auth:
@@ -79,11 +79,11 @@ async def delete_message(event):
             [Button.url("💠 Channel 💠", url="https://t.me/indianimei"),
             Button.url("⚜️ Group ⚜️", url="https://t.me/indianimein")],
             [Button.url("📜 Index 📜", url="https://t.me/IndianimeNetwork"),
-            Button.url("Base", url="https://t.me/indanimebase")],
+            Button.url("Base", url="https://t.me/indianimebase")],
             [Button.url("Ongoing Anime", url="https://t.me/Ongoing_Anime1")]]
        
         await event.edit(f"**REJECTED**\n\n~~{xx}~~", buttons=[Button.inline("Request Rejected 🚫", data="ndone")])
-        await tbot.send_message(-1001459815052, f"**⚠️ Request Rejected By Admin !!**\n\n~~{xx}~~", buttons=btns)
+        await tbot.send_message(-1001415010098, f"**⚠️ Request Rejected By Admin !!**\n\n~~{xx}~~", buttons=btns)
     else:
         await event.answer("Who TF are you? This is for admins only..", alert=True, cache_time=0)
         
@@ -99,11 +99,11 @@ async def delete_message(event):
             [Button.url("💠 Channel 💠", url="https://t.me/indianimei"),
             Button.url("⚜️ Group ⚜️", url="https://t.me/indianimein")],
             [Button.url("📜 Index 📜", url="https://t.me/IndianimeNetwork"),
-            Button.url("Base", url="https://t.me/indanimebase")],
+            Button.url("Base", url="https://t.me/indianimebase")],
             [Button.url("Ongoing Anime", url="https://t.me/Ongoing_Anime1")]]
        
         await event.edit(f"**UNAVAILABLE**\n\n~~{xx}~~", buttons=[Button.inline("❗ Unavailable ❗", data="navl")])
-        await tbot.send_message(-1001459815052, f"**⚠️ Request Unavailable ⚠️**\n\n~~{xx}~~", buttons=btns)
+        await tbot.send_message(-1001415010098, f"**⚠️ Request Unavailable ⚠️**\n\n~~{xx}~~", buttons=btns)
     else:
         await event.answer("Who TF are you? This is for admins only..", alert=True, cache_time=0)
         
@@ -120,11 +120,11 @@ async def isdone(e):
             [Button.url("💠 Channel 💠", url="https://t.me/indianimei"),
             Button.url("⚜️ Group ⚜️", url="https://t.me/indianimein")],
             [Button.url("📜 Index 📜", url="https://t.me/IndianimeNetwork"),
-            Button.url("Base", url="https://t.me/indanimebase")],
+            Button.url("Base", url="https://t.me/indianimebase")],
             [Button.url("Ongoing Anime", url="https://t.me/Ongoing_Anime1")]]
        
         await e.edit(f"**COMPLETED**\n\n~~{xx}~~", buttons=[Button.inline("Request Completed ✅", data="donne")])
-        await tbot.send_message(-1001459815052, f"**Request Completed**\n\n~~{xx}~~", buttons=btns)
+        await tbot.send_message(-1001415010098, f"**Request Completed**\n\n~~{xx}~~", buttons=btns)
     else:
         await e.answer("Who TF are you? This is for admins only..", alert=True, cache_time=0)
         
