@@ -15,12 +15,12 @@ print("Connecting to Database ...")
 _MGCLIENT: AgnosticClient = AsyncIOMotorClient(DB_URL)
 _RUN = asyncio.get_event_loop().run_until_complete
 
-if "Rika" in _RUN(_MGCLIENT.list_database_names()):
-    print("Rika Database Found :) => Now Logging to it...")
+if "Rikka" in _RUN(_MGCLIENT.list_database_names()):
+    print("Rikka Database Found :) => Now Logging to it...")
 else:
-    print("Rika Database Not Found :( => Creating New Database...")
+    print("Rikka Database Not Found :( => Creating New Database...")
 
-_DATABASE: AgnosticDatabase = _MGCLIENT["Rika"]
+_DATABASE: AgnosticDatabase = _MGCLIENT["Rikka"]
 
 
 def get_collection(name: str) -> AgnosticCollection:

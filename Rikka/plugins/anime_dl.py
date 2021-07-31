@@ -7,9 +7,6 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, Message, 
 from .. import HELP_DICT, TRIGGERS as trg, BOT_NAME
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
 
-headers = {
-    'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:55.0) Gecko/20100101 Firefox/55.0',
-}
 
 
 async def site_search(client: Client, message: Message, site: str):
@@ -38,17 +35,17 @@ async def site_search(client: Client, message: Message, site: str):
             more_results = False
             result = f"<b>No result found for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>AnimeKaizoku</code>"
 
-    elif site == "indi":
-        search_url = f"https://indianime.com/?s={search_query}"
-        html_text = requests.get(search_url , headers=headers).text
+    elif site == "kayo":
+        search_url = f"https://animekayo.com/?s={search_query}"
+        html_text = requests.get(search_url).text
         soup = bs4.BeautifulSoup(html_text, "html.parser")
-        search_result = soup.find_all("h1", {"class": "elementor-post__title"})
+        search_result = soup.find_all("h2", {"class": "title"})
 
-        result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>IndiAnimein</code>: \n"
+        result = f"<b>Search results for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>AnimeKayo</code>: \n"
         for entry in search_result:
 
             if entry.text.strip() == "Nothing Found":
-                result = f"<b>No result found for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>@IndiAnimein</code>"
+                result = f"<b>No result found for</b> <code>{html.escape(search_query)}</code> <b>on</b> <code>AnimeKayo</code>"
                 more_results = False
                 break
 
@@ -86,16 +83,12 @@ async def site_search(client: Client, message: Message, site: str):
 async def kaizoku(c: Client, update: Update):
     await site_search(c, update, "kaizoku")
 
-@Client.on_message(filters.command(["indi", f"indi{BOT_NAME}"], prefixes=trg))
+@Client.on_message(filters.command(["kayo", f"kayo{BOT_NAME}"], prefixes=trg))
 async def kyo(c: Client, update: Update):
-    await site_search(c, update, "indi")
+    await site_search(c, update, "kayo")
 
 @Client.on_message(filters.command(["gogo", f"gogo{BOT_NAME}"], prefixes=trg))
 async def gogo(c: Client, update: Update):
     await site_search(c, update, "ganime")
 
-HELP_DICT["anime_dl"] = """ *Site Search commands:*
- • `/kaizoku <anime>`*:* search an anime on animekaizoku.com
- • `/indi <anime>`*:* search an anime on indianime.com
- • `/ganime <anime>`*:* search an anime on gogoanime.com.
-"""
+# HELP_DICT["anime_dl"] = ""

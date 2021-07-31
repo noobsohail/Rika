@@ -1,16 +1,16 @@
 import asyncio
 from pyrogram import Client, idle
-from . import Rika, tbot
+from . import Rikka, tbot
 from .utils.db import _close_db
 
 
 async def main():
-    await asyncio.gather(Rika.start())
+    await asyncio.gather(Rikka.start())
     await idle()
-    await asyncio.gather(Rika.stop())
+    await asyncio.gather(Rikka.stop())
     _close_db()
 
-from Rika import requester, ggl
+from Rikka import requester, ggl
 print("Imported Requester, Google")
 
 async def tmain():

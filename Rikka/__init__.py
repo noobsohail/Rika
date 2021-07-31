@@ -16,7 +16,7 @@ API_ID = int(os.environ.get("API_ID"))
 LOG_CHANNEL_ID = int(os.environ.get("LOG_CHANNEL_ID"))
 OWNER = list(filter(lambda x: x, map(int, os.environ.get("OWNER_ID").split())))  ## sudos can be included
 
-DOWN_PATH = "Rika/downloads/"
+DOWN_PATH = "Rikka/downloads/"
 HELP_DICT = dict()
 
 api_id = API_ID
@@ -25,5 +25,5 @@ bot_token = BOT_TOKEN
 
 tbot = TelegramClient('anon', api_id, api_hash).start(bot_token=bot_token)
 
-plugins = dict(root="Rika/plugins")
-Rika = Client("Rika", bot_token=BOT_TOKEN, api_id=API_ID, api_hash=API_HASH, plugins=plugins)
+plugins = dict(root="Rikka/plugins")
+Rikka = Client("Rikka", bot_token=BOT_TOKEN, api_id=API_ID, api_hash=API_HASH, plugins=plugins)

@@ -1,1 +1,1 @@
-worker: python3 -m Rika
+worker: python3 -m Rikka

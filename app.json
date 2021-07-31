@@ -7,8 +7,8 @@
         "Bot",
         "Anime"
     ],
-    "repository":"https://github.com/noobsohail/Rika",
-    "website":"https://github.com/noobsohail/Rika",
+    "repository":"https://github.com/noobsohail/Rikka",
+    "website":"https://github.com/noobsohail/Rikka",
     "success_url":"https://t.me/noobsohail",
     "env":{
         "API_ID":{

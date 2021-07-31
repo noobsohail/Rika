@@ -39,7 +39,7 @@ async def anime_cmd(client: Client, message: Message):
     gid = message.chat
     if gid.type in ["supergroup", "group"] and not await (GROUPS.find_one({"id": gid.id})):
         await asyncio.gather(GROUPS.insert_one({"id": gid.id, "grp": gid.title}))
-        await clog("Rika", f"Bot added to a new group\n\n{gid.username or gid.title}\nID: `{gid.id}`", "NEW_GROUP")
+        await clog("Rikka", f"Bot added to a new group\n\n{gid.username or gid.title}\nID: `{gid.id}`", "NEW_GROUP")
     if len(text)==1:
         k = await message.reply_text("NameError: 'query' not defined")
         await asyncio.sleep(5)
@@ -73,7 +73,7 @@ async def manga_cmd(client: Client, message: Message):
     gid = message.chat
     if gid.type in ["supergroup", "group"] and not await (GROUPS.find_one({"id": gid.id})):
         await asyncio.gather(GROUPS.insert_one({"id": gid.id, "grp": gid.title}))
-        await clog("Rika", f"Bot added to a new group\n\n{gid.username or gid.title}\nID: `{gid.id}`", "NEW_GROUP")
+        await clog("Rikka", f"Bot added to a new group\n\n{gid.username or gid.title}\nID: `{gid.id}`", "NEW_GROUP")
     if len(text)==1:
         k = await message.reply_text("NameError: 'query' not defined")
         await asyncio.sleep(5)
@@ -729,8 +729,8 @@ HELP_DICT["logout"] = "Use `/logout` or `!logout` cmd to revoke authorization"
 HELP_DICT["user"] = """Use `/user` cmd to get info on a user
 
 **Usage:**
-        `/user lostb053`
-        `!user lostb053`"""
+        `/user noobsohail`
+        `!user noobsohail`"""
 HELP_DICT["sfw"] = "Use `/sfw` cmd to toggle nsfw settings in group"
 HELP_DICT["me"] = "Use `/me` or `!me` cmd to get your anilist recent activity\nCan also use `/activity` or `!activity`"
 HELP_DICT["favourites"] = "Use `/favs` or `!favs` cmd to get your anilist favourites"
