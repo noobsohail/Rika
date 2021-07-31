@@ -22,7 +22,7 @@ async def start_(client: Client, message: Message):
         user = message.from_user
         if not (user.id in OWNER) and not (await USERS.find_one({"id": user.id})):
             await asyncio.gather(USERS.insert_one({"id": user.id, "user": user.first_name}))
-            await clog("Rika", f"New User started bot\n\n[{user.first_name}](tg://user?id={user.id})\nID: `{user.id}`", "NEW_USER")
+            await clog("Rikka", f"New User started bot\n\n[{user.first_name}](tg://user?id={user.id})\nID: `{user.id}`", "NEW_USER")
         if len(message.text.split(" "))!=1:
             deep_cmd = message.text.split(" ")[1]
             if deep_cmd=="help":
@@ -45,7 +45,7 @@ async def start_(client: Client, message: Message):
         gid = message.chat
         if not await (GROUPS.find_one({"id": gid.id})):
             await asyncio.gather(GROUPS.insert_one({"id": gid.id, "grp": gid.title}))
-            await clog("Rika", f"Bot added to a new group\n\n{gid.username or gid.title}\nID: `{gid.id}`", "NEW_GROUP")
+            await clog("Rikka", f"Bot added to a new group\n\n{gid.username or gid.title}\nID: `{gid.id}`", "NEW_GROUP")
         await client.send_photo(message.chat.id, photo="https://telegra.ph/file/886dec1b68d8af27a728a.jpg", caption="**Hey Dear I Didn't Sleep Yet !!**\n\nLet's Discuss In Private Chat About Kids!!")
 
 
@@ -117,7 +117,7 @@ async def stats_(client: Client, message: Message):
     nosauus = await AUTH_USERS.estimated_document_count()
     nosgrps = await GROUPS.estimated_document_count()
     nossgrps = await SFW_GROUPS.estimated_document_count()
-    kk = requests.get("https://api.github.com/repos/noobsohail/Rika").json()
+    kk = requests.get("https://api.github.com/repos/noobsohail/Rikka").json()
     await x.edit_text(f"""
 📜 Stats:-
 

@@ -2,7 +2,7 @@ from telethon.tl.types import ChannelParticipantsAdmins
 from telethon.utils import get_display_name
 from telethon import *
 from . import API_ID, API_HASH, BOT_TOKEN, tbot, OWNER
-from Rika.events import register
+from Rikka.events import register
 import logging
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
