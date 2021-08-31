@@ -1,5 +1,5 @@
 import requests, asyncio, os, shlex, mimetypes
-from os.path import 🎬 Movies 🎬name
+from os.path import basename
 from typing import Tuple, Optional
 from uuid import uuid4
 from pyrogram import Client
@@ -87,7 +87,7 @@ async def media_to_image(client: Client, message: Message, x: Message):
         media,
         file_name=DOWN_PATH + rand_key(),
     )
-    dls_loc = os.path.join(DOWN_PATH, os.path.🎬 Movies 🎬name(dls))
+    dls_loc = os.path.join(DOWN_PATH, os.path.basename(dls))
     if replied.sticker and replied.sticker.file_name.endswith(".tgs"):
         png_file = os.path.join(DOWN_PATH, f"{rand_key()}.png")
         cmd = f"lottie_convert.py --frame 0 -if lottie -of png {dls_loc} {png_file}"
@@ -148,7 +148,7 @@ async def take_screen_shot(
     )
     ttl = duration // 2
     thumb_image_path = path or os.path.join(
-        DOWN_PATH, f"{🎬 Movies 🎬name(video_file)}.jpg"
+        DOWN_PATH, f"{basename(video_file)}.jpg"
     )
     command = f'''ffmpeg -ss {ttl} -i "{video_file}" -vframes 1 "{thumb_image_path}"'''
     err = (await runcmd(command))[1]

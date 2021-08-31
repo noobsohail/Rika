@@ -24,7 +24,7 @@ ANIME_TEMPLATE = """{name}
 
 {additional}
 
-**   [  IndiAnime  ](https://t.me/AN1ME_HUB)"""
+**   [  IndiAnime  ](https://t.me/indianimei)"""
 
 # GraphQL Queries.
 ANIME_QUERY = """
@@ -947,7 +947,7 @@ __{native}__
 
 <a href='{site_url}'>Visit Website</a>
 
-**   <a href='https://t.me/AN1ME_HUB'> 💖 IndiAnime 💖 </a>"""
+**   <a href='https://t.me/indianimei'> 💖 IndiAnime 💖 </a>"""
     total = result["data"]["Page"]["pageInfo"]["total"]
     return img, [cap_text, total], [id_, isfav]
 

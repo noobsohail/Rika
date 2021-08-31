@@ -40,7 +40,7 @@ async def filter_requests(event):
                 user = f"[{get_display_name(sender)}](tg://user?id={event.sender_id})"
             else:
                 user = "@" + str(sender.username)
-        except 🎬 Movies 🎬Exception:
+        except BaseException:
             user = f"[User](tg://user?id={event.sender_id})"
         chat_id = (str(event.chat_id)).replace("-100", "")
         username = ((await bot.get_entity(REQ_GO)).username)
@@ -60,7 +60,7 @@ async def filter_requests(event):
             [Button.url("💠 Channel 💠", url="https://t.me/AN1ME_HUB"),
             Button.url("⚜️ Group ⚜️", url="https://t.me/an1me_hub_discussion")],
             [Button.url("📜 Index 📜", url="https://t.me/index_animehub"),
-            Button.url("🎬 Movies 🎬", url="https://t.me/AN1ME_HUB_MOVIES")],
+            Button.url("Movies", url="https://t.me/AN1ME_HUB_MOVIES")],
             [Button.url("Ongoing Anime", url="https://t.me/Ongoing_Anime1")]]
         await event.reply(f"**👋 Hello {user} !!**\n\n📍 Your Request for  `{anim}`  has been submitted to the admins.\n\n🚀 Your Request Will Be Uploaded In 48hours or less.\n📌 Please Note that Admins might be busy. So, this may take more time. \n\n**👇 See Your Request Status Here 👇**", buttons=btns)
         if not auth:
@@ -79,7 +79,7 @@ async def delete_message(event):
             [Button.url("💠 Channel 💠", url="https://t.me/AN1ME_HUB"),
             Button.url("⚜️ Group ⚜️", url="https://t.me/an1me_hub_discussion")],
             [Button.url("📜 Index 📜", url="https://t.me/index_animehub"),
-            Button.url("🎬 Movies 🎬", url="https://t.me/AN1ME_HUB_MOVIES")],
+            Button.url("Movies", url="https://t.me/AN1ME_HUB_MOVIES")],
             [Button.url("Ongoing Anime", url="https://t.me/Ongoing_Anime1")]]
        
         await event.edit(f"**REJECTED**\n\n~~{xx}~~", buttons=[Button.inline("Request Rejected 🚫", data="ndone")])
@@ -99,7 +99,7 @@ async def delete_message(event):
             [Button.url("💠 Channel 💠", url="https://t.me/AN1ME_HUB"),
             Button.url("⚜️ Group ⚜️", url="https://t.me/an1me_hub_discussion")],
             [Button.url("📜 Index 📜", url="https://t.me/index_animehub"),
-            Button.url("🎬 Movies 🎬", url="https://t.me/AN1ME_HUB_MOVIES")],
+            Button.url("Movies", url="https://t.me/AN1ME_HUB_MOVIES")],
             [Button.url("Ongoing Anime", url="https://t.me/Ongoing_Anime1")]]
        
         await event.edit(f"**UNAVAILABLE**\n\n~~{xx}~~", buttons=[Button.inline("❗ Unavailable ❗", data="navl")])
@@ -120,7 +120,7 @@ async def isdone(e):
             [Button.url("💠 Channel 💠", url="https://t.me/AN1ME_HUB"),
             Button.url("⚜️ Group ⚜️", url="https://t.me/an1me_hub_discussion")],
             [Button.url("📜 Index 📜", url="https://t.me/index_animehub"),
-            Button.url("🎬 Movies 🎬", url="https://t.me/AN1ME_HUB_MOVIES")],
+            Button.url("Movies", url="https://t.me/AN1ME_HUB_MOVIES")],
             [Button.url("Ongoing Anime", url="https://t.me/Ongoing_Anime1")]]
        
         await e.edit(f"**COMPLETED**\n\n~~{xx}~~", buttons=[Button.inline("Request Completed ✅", data="donne")])

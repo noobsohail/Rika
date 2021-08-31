@@ -39,7 +39,7 @@ async def start_(client: Client, message: Message):
         await client.send_photo(
             message.chat.id,
             photo="{PM_START_IMG}",
-            caption=f"😄 __Hey!! I'm__ {bot.first_name}\n\n**💖 Hi i am Shin Wolford. I am an Anime theme 🎬 Movies 🎬 group bot which provide anime details. !!**\n\n**😉 Join [Group](https://t.me/an1me_hub_discussion) too use me!!**\n\n\n**💌 Mantained By @Sohailkhan_Anime !**",
+            caption=f"😄 __Hey!! I'm__ {bot.first_name}\n\n**💖 Hi i am Shin Wolford. I am an Anime theme base group bot which provide anime details. !!**\n\n**😉 Join [Group](https://t.me/an1me_hub_discussion) too use me!!**\n\n\n**💌 Mantained By @Sohailkhan_Anime !**",
         )
     else:
         gid = message.chat
