@@ -1,11 +1,11 @@
 import requests, asyncio, os, shlex, mimetypes
-from os.path import basename
+from os.path import 🎬 Movies 🎬name
 from typing import Tuple, Optional
 from uuid import uuid4
 from pyrogram import Client
 from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.types import InlineKeyboardButton, CallbackQuery, Message, InlineKeyboardMarkup
-from .. import OWNER, DOWN_PATH, Rikka, LOG_CHANNEL_ID
+from .. import OWNER, DOWN_PATH, Wolford, LOG_CHANNEL_ID
 from ..utils.db import get_collection
 
 AUTH_USERS = get_collection("AUTH_USERS")
@@ -87,7 +87,7 @@ async def media_to_image(client: Client, message: Message, x: Message):
         media,
         file_name=DOWN_PATH + rand_key(),
     )
-    dls_loc = os.path.join(DOWN_PATH, os.path.basename(dls))
+    dls_loc = os.path.join(DOWN_PATH, os.path.🎬 Movies 🎬name(dls))
     if replied.sticker and replied.sticker.file_name.endswith(".tgs"):
         png_file = os.path.join(DOWN_PATH, f"{rand_key()}.png")
         cmd = f"lottie_convert.py --frame 0 -if lottie -of png {dls_loc} {png_file}"
@@ -148,7 +148,7 @@ async def take_screen_shot(
     )
     ttl = duration // 2
     thumb_image_path = path or os.path.join(
-        DOWN_PATH, f"{basename(video_file)}.jpg"
+        DOWN_PATH, f"{🎬 Movies 🎬name(video_file)}.jpg"
     )
     command = f'''ffmpeg -ss {ttl} -i "{video_file}" -vframes 1 "{thumb_image_path}"'''
     err = (await runcmd(command))[1]
@@ -216,7 +216,7 @@ def make_it_rw(time_stamp):
 
 async def clog(name: str, text: str, tag: str):
     log = f"#{name.upper()}  #{tag.upper()}\n\n{text}"
-    await Rikka.send_message(chat_id=LOG_CHANNEL_ID, text=log)
+    await Wolford.send_message(chat_id=LOG_CHANNEL_ID, text=log)
 
 
 def get_btns(media, user: int, result: list, lsqry: str = None, lspage: int = None, auth: bool = False, sfw: str = "False"):

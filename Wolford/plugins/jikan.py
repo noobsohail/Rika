@@ -25,7 +25,7 @@ async def ns_(client, cq: CallbackQuery):
     await cq.edit_message_text(msg[0], reply_markup=buttons)
 
 
-HELP_DICT["schedule"] = """Use `/schedule` cmd to get scheduled animes based on weekdays
+HELP_DICT["schedule"] = """Use `/schedule` cmd to get scheduled animes 🎬 Movies 🎬d on weekdays
 
 **Usage:**
         `/schedule sunday`

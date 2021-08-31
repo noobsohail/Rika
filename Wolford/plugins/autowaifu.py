@@ -5,7 +5,7 @@ from pyrogram import *
 from pyrogram.types import Message
 import time
 import os
-from Rikka import *
+from Wolford import *
 
 xyz = "A qt waifu appeared! Add them to your harem by sending /protecc character name"
 
@@ -34,6 +34,6 @@ async def saucenao(client: Client, message: Message):
     div = xx.find_all("div", {"class": "r5a77d"})[0]
     alls = div.find("a")
     text = alls.text
-    await client.send_message(message.chat.id, f"`/protecc {text}`")
+    await client.send_message(message.chat.id, f"**query:** `{text}` ")
     await sleep(5)
     os.remove(dl)

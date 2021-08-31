@@ -7,7 +7,7 @@ TRIGGERS = os.environ.get("TRIGGERS", "/ !").split(" ")
 API_HASH = os.environ.get("API_HASH")
 BOT_TOKEN = os.environ.get("BOT_TOKEN")
 BOT_NAME = os.environ.get("BOT_NAME")
-DB_URL = os.environ.get("DATABASE_URL")
+DB_URL = os.environ.get("DB_URL")
 SAUCE_API = os.environ.get("SAUCENAO_API")
 ANILIST_CLIENT = os.environ.get("ANILIST_CLIENT")
 ANILIST_SECRET = os.environ.get("ANILIST_SECRET")
@@ -15,8 +15,12 @@ ANILIST_REDIRECT_URL = os.environ.get("ANILIST_REDIRECT_URL", "https://anilist.c
 API_ID = int(os.environ.get("API_ID"))
 LOG_CHANNEL_ID = int(os.environ.get("LOG_CHANNEL_ID"))
 OWNER = list(filter(lambda x: x, map(int, os.environ.get("OWNER_ID").split())))  ## sudos can be included
+PM_START_IMG = os.environ.get("PM_START_IMG", "https://telegra.ph/file/09bba255f18cf0c0e0652.jpg")
+GROUP_START_IMG = os.environ.get("GROUP_START_IMG", "https://telegra.ph/file/8deb46c1bc09dc3bdbda6.jpg")
+HELP_IMG = os.environ.get("HELP_IMG", "https://telegra.ph/file/0b35bf70fd9de962e69ab.jpg")
+OWNER_HELP_IMG = os.environ.get("OWNER_HELP_IMG", "https://telegra.ph/file/8deb46c1bc09dc3bdbda6.jpg")
 
-DOWN_PATH = "Rikka/downloads/"
+DOWN_PATH = "Wolford/downloads/"
 HELP_DICT = dict()
 
 api_id = API_ID
@@ -25,5 +29,5 @@ bot_token = BOT_TOKEN
 
 tbot = TelegramClient('anon', api_id, api_hash).start(bot_token=bot_token)
 
-plugins = dict(root="Rikka/plugins")
-Rikka = Client("Rikka", bot_token=BOT_TOKEN, api_id=API_ID, api_hash=API_HASH, plugins=plugins)
+plugins = dict(root="Wolford/plugins")
+Wolford = Client("Wolford", bot_token=BOT_TOKEN, api_id=API_ID, api_hash=API_HASH, plugins=plugins)

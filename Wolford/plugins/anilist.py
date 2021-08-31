@@ -1,4 +1,4 @@
-# base code was taken from @DeletedUser420's Userge-Plugins repo
+# 🎬 Movies 🎬 code was taken from @DeletedUser420's Userge-Plugins repo
 # originally authored by Phyco-Ninja (https://github.com/Phyco-Ninja) (@PhycoNinja13b)
 # I've just tweaked his file a bit (maybe a lot)
 # But i sticked to the format he used which looked cool
@@ -39,7 +39,7 @@ async def anime_cmd(client: Client, message: Message):
     gid = message.chat
     if gid.type in ["supergroup", "group"] and not await (GROUPS.find_one({"id": gid.id})):
         await asyncio.gather(GROUPS.insert_one({"id": gid.id, "grp": gid.title}))
-        await clog("Rikka", f"Bot added to a new group\n\n{gid.username or gid.title}\nID: `{gid.id}`", "NEW_GROUP")
+        await clog("Wolford", f"Bot added to a new group\n\n{gid.username or gid.title}\nID: `{gid.id}`", "NEW_GROUP")
     if len(text)==1:
         k = await message.reply_text("NameError: 'query' not defined")
         await asyncio.sleep(5)
@@ -73,7 +73,7 @@ async def manga_cmd(client: Client, message: Message):
     gid = message.chat
     if gid.type in ["supergroup", "group"] and not await (GROUPS.find_one({"id": gid.id})):
         await asyncio.gather(GROUPS.insert_one({"id": gid.id, "grp": gid.title}))
-        await clog("Rikka", f"Bot added to a new group\n\n{gid.username or gid.title}\nID: `{gid.id}`", "NEW_GROUP")
+        await clog("Wolford", f"Bot added to a new group\n\n{gid.username or gid.title}\nID: `{gid.id}`", "NEW_GROUP")
     if len(text)==1:
         k = await message.reply_text("NameError: 'query' not defined")
         await asyncio.sleep(5)

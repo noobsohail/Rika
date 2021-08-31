@@ -2,7 +2,7 @@ from telethon.tl.types import ChannelParticipantsAdmins
 from telethon.utils import get_display_name
 from telethon import *
 from . import API_ID, API_HASH, BOT_TOKEN, tbot, OWNER
-from Rikka.events import register
+from Wolford.events import register
 import logging
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
@@ -11,9 +11,9 @@ import os
 from shutil import rmtree
 from .utils.google import googleimagesdownload
 
-IN_GRP = -1001415010098
+IN_GRP = -1001459815052
 bot = asst = tbot
-REQ_GO = -1001579439262
+REQ_GO = -1001176025751
 on = tbot.on
 auth = OWNER
 
@@ -29,7 +29,7 @@ async def img(event):
             try:
                 lim = int(sim.split(";")[1])
                 sim = sim.split(";")[0]
-            except BaseExceptaion:
+            except 🎬 Movies 🎬Exceptaion:
                 lim = 5
         else:
             lim = 5
@@ -53,7 +53,7 @@ async def _(event):
         return
     if "/rev" in event.text:
         start = datetime.datetime.now()
-        BASE_URL = "http://www.google.com"
+        🎬 Movies 🎬_URL = "http://www.google.com"
         OUTPUT_STR = "Reply to an image to do Google Reverse Search"
         if event.reply_to_msg_id:
             hell = await eor(event, "Pre Processing Media")
@@ -63,7 +63,7 @@ async def _(event):
                 downloaded_file_name = await bot.download_media(
                     previous_message, Config.TMP_DOWNLOAD_DIRECTORY
                 )
-                SEARCH_URL = "{}/searchbyimage/upload".format(BASE_URL)
+                SEARCH_URL = "{}/searchbyimage/upload".format(🎬 Movies 🎬_URL)
                 multipart = {
                     "encoded_image": (
                         downloaded_file_name,
@@ -80,7 +80,7 @@ async def _(event):
             else:
                 previous_message_text = previous_message.message
                 SEARCH_URL = "{}/searchbyimage?image_url={}"
-                request_url = SEARCH_URL.format(BASE_URL, previous_message_text)
+                request_url = SEARCH_URL.format(🎬 Movies 🎬_URL, previous_message_text)
                 google_rs_response = requests.get(request_url, allow_redirects=False)
                 the_location = google_rs_response.headers.get("Location")
             await hell.edit("Found Google Result. Processing results...")
@@ -92,7 +92,7 @@ async def _(event):
             # document.getElementsByClassName("r5a77d"): PRS
             prs_div = soup.find_all("div", {"class": "r5a77d"})[0]
             prs_anchor_element = prs_div.find("a")
-            prs_url = BASE_URL + prs_anchor_element.get("href")
+            prs_url = 🎬 Movies 🎬_URL + prs_anchor_element.get("href")
             prs_text = prs_anchor_element.text
             # document.getElementById("jHnbRc")
             img_size_div = soup.find(id="jHnbRc")

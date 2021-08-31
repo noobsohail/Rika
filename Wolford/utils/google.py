@@ -524,7 +524,7 @@ class googleimagesdownload:
             for _ in range(50):
                 element.send_keys(Keys.PAGE_DOWN)
                 time.sleep(0.3)  # bot id protection
-        except BaseException:
+        except 🎬 Movies 🎬Exception:
             for _ in range(10):
                 element.send_keys(Keys.PAGE_DOWN)
                 time.sleep(0.3)  # bot id protection
@@ -679,7 +679,7 @@ class googleimagesdownload:
             l3 = content.find("/search?sa=X&amp;q=")
             l4 = content.find(";", l3 + 19)
             return content[l3 + 19 : l4]
-        except BaseException:
+        except 🎬 Movies 🎬Exception:
             return "Cloud not connect to Google Images endpoint"
 
     # Building URL parameters
@@ -1296,11 +1296,11 @@ class googleimagesdownload:
         start_object = s.find("{", start_line + 1)
         end_object = s.find("</div>", start_object + 1)
         object_raw = str(s[start_object:end_object])
-        # remove escape characters based on python version
+        # remove escape characters 🎬 Movies 🎬d on python version
         try:
             object_decode = bytes(object_raw, "utf-8").decode("unicode_escape")
             final_object = json.loads(object_decode)
-        except BaseException:
+        except 🎬 Movies 🎬Exception:
             final_object = ""
         return final_object, end_object
 
@@ -1668,7 +1668,7 @@ def main():
         if arguments["single_image"]:  # Download Single Image using a URL
             response = googleimagesdownload()
             response.single_image(arguments["single_image"])
-        else:  # or download multiple images based on keywords/keyphrase search
+        else:  # or download multiple images 🎬 Movies 🎬d on keywords/keyphrase search
             response = googleimagesdownload()
             # wrapping response in a variable just for consistency
             paths, errors = response.download(arguments)

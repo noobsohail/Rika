@@ -17,7 +17,7 @@
         "API_HASH":{
             "description":"Get this value from https://my.telegram.org"
         },
-        "DATABASE_URL":{
+        "DB_URL":{
             "description":"Mongodb url from https://cloud.mongodb.com/, guide: https://del.dog/mongodb_guide"
         },
         "LOG_CHANNEL_ID":{
