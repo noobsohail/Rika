@@ -4,7 +4,7 @@ from natsort import natsorted
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery
 from pyrogram.errors.exceptions.bad_request_400 import UserNotParticipant
-from .. import BOT_NAME, TRIGGERS as trg, OWNER, HELP_DICT, PM_START_IMG, GROUP_START_IMG, HELP_IMG, OWNER_HELP_IMG
+from .. import BOT_NAME, TRIGGERS as trg, OWNER, HELP_DICT
 from ..utils.db import get_collection
 from ..utils.helper import AUTH_USERS, clog, check_user
 from ..utils.data_parser import get_additional_info
@@ -38,7 +38,7 @@ async def start_(client: Client, message: Message):
                 return
         await client.send_photo(
             message.chat.id,
-            photo="{PM_START_IMG}",
+            photo="https://telegra.ph/file/09bba255f18cf0c0e0652.jpg",
             caption=f"😄 __Hey!! I'm__ {bot.first_name}\n\n**💖 Hi i am Shin Wolford. I am an Anime theme base group bot which provide anime details. !!**\n\n**😉 Join [Group](https://t.me/an1me_hub_discussion) too use me!!**\n\n\n**💌 Mantained By @Sohailkhan_Anime !**",
         )
     else:
@@ -46,7 +46,7 @@ async def start_(client: Client, message: Message):
         if not await (GROUPS.find_one({"id": gid.id})):
             await asyncio.gather(GROUPS.insert_one({"id": gid.id, "grp": gid.title}))
             await clog("Wolford", f"Bot added to a new group\n\n{gid.username or gid.title}\nID: `{gid.id}`", "NEW_GROUP")
-        await client.send_photo(message.chat.id, photo="{GROUP_START_IMG}", caption="**Oh, both of you are taking it, too. about me ?", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Chat In Private", url=f"https://t.me/{bot_us}/?start=help")]]))
+        await client.send_photo(message.chat.id, photo="https://telegra.ph/file/8deb46c1bc09dc3bdbda6.jpg", caption="**Oh, both of you are taking it, too. about me ?", reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Chat In Private", url=f"https://t.me/{bot_us}/?start=help")]]))
 
 
 @Client.on_message(filters.command(['help', f'help{BOT_NAME}'], prefixes=trg))
@@ -55,7 +55,7 @@ async def help_(client: Client, message: Message):
     bot_us = (await client.get_me()).username
     buttons = help_btns(id_)
     if id_ in OWNER:
-        await client.send_photo(message.chat.id, photo="{HELP_IMG}", caption="💖 **Hey!! This is my help menu.** \nAll Commands and it's Explanation Are here.\nGo through them 🤗", reply_markup=buttons)
+        await client.send_photo(message.chat.id, photo="https://telegra.ph/file/0b35bf70fd9de962e69ab.jpg", caption="💖 **Hey!! This is my help menu.** \nAll Commands and it's Explanation Are here.\nGo through them 🤗", reply_markup=buttons)
         await client.send_message(
             message.chat.id,
             text="""Owners can also use
@@ -65,7 +65,7 @@ async def help_(client: Client, message: Message):
         )
     else:
         if message.chat.id==message.from_user.id:
-            await client.send_photo(message.chat.id, photo="{OWNER_HELP_IMG}", caption="💖 **Hey!! This is my help menu.** \nAll Commands and it's Explanation Are here.\nGo through them 🤗", reply_markup=buttons)
+            await client.send_photo(message.chat.id, photo="https://telegra.ph/file/8deb46c1bc09dc3bdbda6.jpg", caption="💖 **Hey!! This is my help menu.** \nAll Commands and it's Explanation Are here.\nGo through them 🤗", reply_markup=buttons)
         else:
             await client.send_message(
                 message.chat.id,

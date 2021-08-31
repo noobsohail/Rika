@@ -15,10 +15,6 @@ ANILIST_REDIRECT_URL = os.environ.get("ANILIST_REDIRECT_URL", "https://anilist.c
 API_ID = int(os.environ.get("API_ID"))
 LOG_CHANNEL_ID = int(os.environ.get("LOG_CHANNEL_ID"))
 OWNER = list(filter(lambda x: x, map(int, os.environ.get("OWNER_ID").split())))  ## sudos can be included
-PM_START_IMG = os.environ.get("PM_START_IMG", "https://telegra.ph/file/09bba255f18cf0c0e0652.jpg")
-GROUP_START_IMG = os.environ.get("GROUP_START_IMG", "https://telegra.ph/file/8deb46c1bc09dc3bdbda6.jpg")
-HELP_IMG = os.environ.get("HELP_IMG", "https://telegra.ph/file/0b35bf70fd9de962e69ab.jpg")
-OWNER_HELP_IMG = os.environ.get("OWNER_HELP_IMG", "https://telegra.ph/file/8deb46c1bc09dc3bdbda6.jpg")
 
 DOWN_PATH = "Wolford/downloads/"
 HELP_DICT = dict()
