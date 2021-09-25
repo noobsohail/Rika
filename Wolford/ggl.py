@@ -13,7 +13,7 @@ from .utils.google import googleimagesdownload
 
 IN_GRP = -1001459815052
 bot = asst = tbot
-REQ_GO = -1001176025751
+REQ_GO =  -1001509437008
 on = tbot.on
 auth = OWNER
 
