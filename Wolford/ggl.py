@@ -1,7 +1,7 @@
 from telethon.tl.types import ChannelParticipantsAdmins
 from telethon.utils import get_display_name
 from telethon import *
-from . import API_ID, API_HASH, BOT_TOKEN, tbot, OWNER
+from Wolford import *
 from Wolford.events import register
 import logging
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
@@ -11,9 +11,9 @@ import os
 from shutil import rmtree
 from .utils.google import googleimagesdownload
 
-IN_GRP = -1001459815052
+IN_GRP = GROUP_ID
 bot = asst = tbot
-REQ_GO = -1001176025751
+REQ_GO = REQ_CHANNEL_ID
 on = tbot.on
 auth = OWNER
 

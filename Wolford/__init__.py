@@ -16,6 +16,22 @@ API_ID = int(os.environ.get("API_ID"))
 LOG_CHANNEL_ID = int(os.environ.get("LOG_CHANNEL_ID"))
 OWNER = list(filter(lambda x: x, map(int, os.environ.get("OWNER_ID").split())))  ## sudos can be included
 
+
+#Requester.py
+CHANNEL_USERNAME = os.environ.get("CHANNEL_USERNAME", "@AN1ME_HUB")
+GROUP_USERNAME = os.environ.get("GROUP_USERNAME", "@AN1ME_HUB_DISCUSSION")
+GROUP_ID = list(filter(lambda x: x, map(int, os.environ.get("GROUP_ID").split())))
+REQ_CHANNEL_ID = os.environ.get("REQ_CHANNEL_ID", -1001176025751)
+#BUTTONS IN REQUESTER
+BTN1_NAME = os.environ.get("BTN1_NAME", "📜 Index 📜")
+BTN1_LINK = os.environ.get("BTN1_LINK", "https://t.me/index_animehub")
+
+BTN2_NAME = os.environ.get("BTN2_NAME", "Movies")
+BTN2_LINK = os.environ.get("BTN2_LINK", "https://t.me/anime_hub_MOVIES")
+
+BTN3_NAME = os.environ.get("BTN3_NAME", "Ongoing Anime")
+BTN3_LINK = os.environ.get("BTN3_LINK", "https://t.me/Ongoing_Anime1")
+
 DOWN_PATH = "Wolford/downloads/"
 HELP_DICT = dict()
 
