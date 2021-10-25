@@ -39,7 +39,7 @@ async def start_(client: Client, message: Message):
         await client.send_photo(
             message.chat.id,
             photo="https://telegra.ph/file/d5da24730bf5921fe488a.jpg",
-            caption=f"😄 __Hey!! I'm__ {bot.first_name}\n\n**💖 Hi i am Rikka Takanashi Made By Team [IndiAnime](https://t.me/indianimebase) !!**\n\n**😉 Join [Group](https://t.me/indianimein) too use me!!**\n\n\n**💌 Mantained By @Sohailkhan_Anime !**",
+            caption=f"😄 __Hey!! I'm__ {bot.first_name}\n\n**💖 Hi i am Rikka Takanashi Made By Team [IndiAnime](https://t.me/AcGc_01) !!**\n\n**😉 Join [Group](https://t.me/Anime_Clan_Group) too use me!!**\n\n\n**💌 Mantained By @Sohailkhan_Anime !**",
         )
     else:
         gid = message.chat

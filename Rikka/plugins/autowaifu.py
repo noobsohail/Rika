@@ -34,6 +34,6 @@ async def saucenao(client: Client, message: Message):
     div = xx.find_all("div", {"class": "r5a77d"})[0]
     alls = div.find("a")
     text = alls.text
-    await client.send_message(message.chat.id, f"`/protecc {text}`")
+    await client.send_message(message.chat.id, f"**Query:**`{text}`")
     await sleep(5)
     os.remove(dl)
