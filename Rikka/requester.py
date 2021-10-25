@@ -74,10 +74,9 @@ async def delete_message(event):
         x = await bot.get_messages(event.chat_id, ids=event.message_id)
         xx = x.raw_text
         btns = [
-            [Button.url("⏳ Request Status ⏳", url=f"https://t.me/{username}/{x.id}")],
-            [Button.url("💠 Channel 💠", url="https://t.me/Anime_x_Clan"),
-            Button.url("⚜️ Group ⚜️", url="https://t.me/Anime_Clan_Group")],
-            [Button.url("📜 Index 📜", url="https://t.me/Anime_Clan_Index")]]
+            [Button.url("💠 Channel 💠", url=f"https://t.me/Anime_x_Clan")],
+            [Button.url("⚜️ Group ⚜️", url="https://t.me/Anime_Clan_Group"),
+            Button.url("📜 Index 📜", url="https://t.me/Anime_Clan_Index")]]
        
         await event.edit(f"**REJECTED**\n\n~~{xx}~~", buttons=[Button.inline("Request Rejected 🚫", data="ndone")])
         await tbot.send_message(-1001177949158, f"**⚠️ Request Rejected By Admin !!**\n\n~~{xx}~~", buttons=btns)
@@ -93,10 +92,9 @@ async def delete_message(event):
         x = await bot.get_messages(event.chat_id, ids=event.message_id)
         xx = x.raw_text
         btns = [
-            [Button.url("⏳ Request Status ⏳", url=f"https://t.me/{username}/{x.id}")],
-            [Button.url("💠 Channel 💠", url="https://t.me/Anime_x_Clan"),
-            Button.url("⚜️ Group ⚜️", url="https://t.me/Anime_Clan_Group")],
-            [Button.url("📜 Index 📜", url="https://t.me/Anime_Clan_Index")]]
+            [Button.url("💠 Channel 💠", url=f"https://t.me/Anime_x_Clan")],
+            [Button.url("⚜️ Group ⚜️", url="https://t.me/Anime_Clan_Group"),
+            Button.url("📜 Index 📜", url="https://t.me/Anime_Clan_Index")]]
        
         await event.edit(f"**UNAVAILABLE**\n\n~~{xx}~~", buttons=[Button.inline("❗ Unavailable ❗", data="navl")])
         await tbot.send_message(-1001177949158, f"**⚠️ Request Unavailable ⚠️**\n\n~~{xx}~~", buttons=btns)
@@ -113,10 +111,9 @@ async def isdone(e):
         x = await bot.get_messages(e.chat_id, ids=e.message_id)
         xx = x.raw_text
         btns = [
-            [Button.url("⏳ Request Status ⏳", url=f"https://t.me/{username}/{x.id}")],
-            [Button.url("💠 Channel 💠", url="https://t.me/Anime_x_Clan"),
-            Button.url("⚜️ Group ⚜️", url="https://t.me/Anime_Clan_Group")],
-            [Button.url("📜 Index 📜", url="https://t.me/Anime_Clan_Index")]]
+            [Button.url("💠 Channel 💠", url=f"https://t.me/Anime_x_Clan")],
+            [Button.url("⚜️ Group ⚜️", url="https://t.me/Anime_Clan_Group"),
+            Button.url("📜 Index 📜", url="https://t.me/Anime_Clan_Index")]]
        
         await e.edit(f"**COMPLETED**\n\n~~{xx}~~", buttons=[Button.inline("Request Completed ✅", data="donne")])
         await tbot.send_message(-1001177949158, f"**Request Completed**\n\n~~{xx}~~", buttons=btns)
