@@ -7,7 +7,7 @@ import logging
 logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
                     level=logging.WARNING)
 
-IN_GRP = -1001415010098
+IN_GRP = -1001177949158
 bot = asst = tbot
 REQ_GO =  -1001522174515
 on = tbot.on
@@ -80,7 +80,7 @@ async def delete_message(event):
             [Button.url("📜 Index 📜", url="https://t.me/Anime_Clan_Index")]]
        
         await event.edit(f"**REJECTED**\n\n~~{xx}~~", buttons=[Button.inline("Request Rejected 🚫", data="ndone")])
-        await tbot.send_message(-1001415010098, f"**⚠️ Request Rejected By Admin !!**\n\n~~{xx}~~", buttons=btns)
+        await tbot.send_message(-1001177949158, f"**⚠️ Request Rejected By Admin !!**\n\n~~{xx}~~", buttons=btns)
     else:
         await event.answer("Who TF are you? This is for admins only..", alert=True, cache_time=0)
         
@@ -99,7 +99,7 @@ async def delete_message(event):
             [Button.url("📜 Index 📜", url="https://t.me/Anime_Clan_Index")]]
        
         await event.edit(f"**UNAVAILABLE**\n\n~~{xx}~~", buttons=[Button.inline("❗ Unavailable ❗", data="navl")])
-        await tbot.send_message(-1001415010098, f"**⚠️ Request Unavailable ⚠️**\n\n~~{xx}~~", buttons=btns)
+        await tbot.send_message(-1001177949158, f"**⚠️ Request Unavailable ⚠️**\n\n~~{xx}~~", buttons=btns)
     else:
         await event.answer("Who TF are you? This is for admins only..", alert=True, cache_time=0)
         
@@ -119,7 +119,7 @@ async def isdone(e):
             [Button.url("📜 Index 📜", url="https://t.me/Anime_Clan_Index")]]
        
         await e.edit(f"**COMPLETED**\n\n~~{xx}~~", buttons=[Button.inline("Request Completed ✅", data="donne")])
-        await tbot.send_message(-1001415010098, f"**Request Completed**\n\n~~{xx}~~", buttons=btns)
+        await tbot.send_message(-1001177949158, f"**Request Completed**\n\n~~{xx}~~", buttons=btns)
     else:
         await e.answer("Who TF are you? This is for admins only..", alert=True, cache_time=0)
         
