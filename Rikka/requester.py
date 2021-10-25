@@ -68,7 +68,7 @@ async def filter_requests(event):
 @tbot.on(events.callbackquery.CallbackQuery(data="reqdelete"))
 async def delete_message(event):
     if not auth:
-        async for x in bot.iter_participants("@indianimein", filter=ChannelParticipantsAdmins):
+        async for x in bot.iter_participants("@Anime_Clan_Group", filter=ChannelParticipantsAdmins):
              auth.append(x.id)
     if event.sender_id in auth:
         x = await bot.get_messages(event.chat_id, ids=event.message_id)
@@ -107,7 +107,7 @@ async def delete_message(event):
 @tbot.on(events.callbackquery.CallbackQuery(data="isdone"))
 async def isdone(e):
     if not auth:
-        async for x in bot.iter_participants("@indianimein", filter=ChannelParticipantsAdmins):
+        async for x in bot.iter_participants("@Anime_Clan_Group", filter=ChannelParticipantsAdmins):
              auth.append(x.id)
     if e.sender_id in auth:
         x = await bot.get_messages(e.chat_id, ids=e.message_id)
