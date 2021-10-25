@@ -11,7 +11,7 @@ IN_GRP = -1001177949158
 bot = asst = tbot
 REQ_GO =  -1001522174515
 on = tbot.on
-auth =  client.iter_participants(channel, filter=ChannelParticipantsAdmins) 
+auth = client.iter_participants(channel, filter=ChannelParticipantsAdmins) 
 
 
 @tbot.on(events.NewMessage(chats=IN_GRP))
