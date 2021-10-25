@@ -9,7 +9,7 @@ logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s'
 
 IN_GRP = -1001177949158
 bot = asst = tbot
-REQ_GO =  -1001522174515
+REQ_GO = -1001522174515
 on = tbot.on
 auth = OWNER
 
